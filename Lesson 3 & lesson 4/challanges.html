@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Counter app</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <!-- load the code for react for websites-->
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <!--  loading babel libaray to conver JSX to JS-->
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      function Counter({count,setCount}) {
+        
+        function countInc() {
+          let val = count;
+          val++;
+          setCount(val);
+        }
+
+        return (
+          <>
+            <button onClick={countInc}>
+              counter {count}
+
+             {count>1? <> times</> : <> time</>} 
+            </button>
+          </>
+        );
+      }
+
+      function Reset({setCount}){
+        function handleSetCount(){
+            setCount(0);
+        }
+        
+        return (
+            <button onClick = {handleSetCount} > reset </button>
+        );
+      }
+
+      function App() {
+        const [count, setCount] = React.useState(0);
+        return (
+            <>
+            <Counter count = {count} setCount = {setCount}/>
+            <Counter count = {count} setCount = {setCount}/>
+            <Reset setCount = {setCount} />
+            </>
+        );
+      }
+
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>

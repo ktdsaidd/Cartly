@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head>
+    <title>ChatBot</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <!-- load the code for react for websites-->
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <!--  loading babel libaray to conver JSX to JS-->
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+    
+      
+      function ProductDetails({itemName,price,discount,imgSrc}){
+        return(
+            <>
+            <p>{itemName}</p>
+            <div><img src={imgSrc} width ="100" /></div>
+            {discount? <del>Price: ${price} </del>:<p>Price: ${price} </p>}
+            
+           <p> {discount}</p>
+           <button> Add to Cart</button>
+           </>
+        );
+      }
+     
+      function App() {
+        return (
+          <>
+           <ProductDetails itemName = "Cotton Socks" price = "10.90" discount ="discount price $5.45" imgSrc = "cotton-socks.png"/>
+           <ProductDetails itemName = "Tennis balls" price = "6" imgSrc = "tennis-balls.png"/>
+           <ProductDetails itemName = "Plain T-Shirt" price = "7.99" imgSrc = "plain-t-shirt.png" />
+
+          </>
+        );
+      }
+
+      const container = document.querySelector(".js-container");
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>
