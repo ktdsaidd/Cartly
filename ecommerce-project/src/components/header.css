@@ -45,6 +45,7 @@
 
 .header .mobile-logo {
   display: none;
+  
 }
 
 @media (max-width: 675px) {

@@ -9,8 +9,9 @@ export function Header(){
         <div className="header">
         <div className="left-section">
           <NavLink to="/" className="header-link">
-            <img className="logo" src={MobileLogoWhite} />
-            <img className="mobile-logo" src={LogoWhite} />
+            <img className="logo" src={LogoWhite} />
+            
+            <img className="mobile-logo" src= {MobileLogoWhite}/>
           </NavLink>
         </div>
 
