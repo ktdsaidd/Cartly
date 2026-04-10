@@ -104,6 +104,25 @@
   margin-top: 3px;
 }
 
+.header .clear-search-btn {
+  background-color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  color: rgb(8, 79, 45);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.2s;
+}
+
+.header .clear-search-btn:hover {
+  background-color: #f0f0f0;
+}
+
 .header .right-section {
   width: 180px;
   flex-shrink: 0;

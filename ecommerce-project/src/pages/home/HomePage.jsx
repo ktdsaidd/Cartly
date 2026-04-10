@@ -6,21 +6,28 @@ import { ProductsGrid } from "./ProductsGrid";
 
 export function HomePage({ cart,loadCart }) {
   const [products, setProducts] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
-    const getHomeData = async () => {
-      const response = await axios.get("/api/products");
+    const timer = setTimeout(() => {
+      const getHomeData = async () => {
+        const url = searchQuery 
+          ? `/api/products?search=${encodeURIComponent(searchQuery)}` 
+          : "/api/products";
+        const response = await axios.get(url);
+        setProducts(response.data);
+      };
+      getHomeData();
+    }, 500);
 
-      setProducts(response.data);
-    };
-    getHomeData();
-  }, []);
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
 
   return (
     <>
       <link rel="icon" type="image/svg+xml" href="home-favicon.png" />
       <title>Cartly - Your Shopping Destination</title>
-      <Header cart={cart} />
+      <Header cart={cart} onSearchChange={setSearchQuery} />
 
       <div className="home-page">
         <ProductsGrid products={products} loadCart={loadCart} />
