@@ -16,13 +16,13 @@ export function Header({cart}){
         <div className="header">
         <div className="left-section">
           <NavLink to="/" className="header-link">
-            <img className="logo" src={LogoWhite} />
+            <img className="logo-white" src={LogoWhite} />
             
             <img className="mobile-logo" src= {MobileLogoWhite}/>
           </NavLink>
         </div>
 
-        <div className="middle-section">
+        <div className="middle-section">  
           <input className="search-bar" type="text" placeholder="Search" />
 
           <button className="search-button">
