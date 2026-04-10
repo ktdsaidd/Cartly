@@ -1,7 +1,25 @@
 import { Header } from '../components/Header';
 import './TrackingPage.css';
-import { Link } from 'react-router';
+import { Link,useParams } from 'react-router';
+import { useState,useEffect } from 'react';  
+import axios from 'axios';  
+import dayjs from 'dayjs';
 export function TrackingPage({cart}) {
+  const { orderId ,productId } = useParams();
+  const [orderProduct, setOrderProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+    useEffect(() => {
+    axios.get(`/api/orders/${orderId}?expand=products`).then((response) => {
+      if (response.data.products && response.data.products.length > 0) {
+        const product = response.data.products.find(p => p.product.id === productId);
+        setOrderProduct(product || response.data.products[0]);
+      }
+      setLoading(false);
+    });
+  }, [orderId]);
+   if (loading) return <div>Loading...</div>;
+  if (!orderProduct) return <div>No tracking information available</div>;
+
   return (
     <>
     <title>Tracking</title>
@@ -14,18 +32,20 @@ export function TrackingPage({cart}) {
             View all orders
           </Link>
 
-          <div className="delivery-date">Arriving on Monday, June 13</div>
-
-          <div className="product-info">
-            Black and Gray Athletic Cotton Socks - 6 Pairs
+          <div className="delivery-date">
+            Arriving on {dayjs(orderProduct.estimatedDeliveryTimeMs).format('dddd, MMMM D')}
           </div>
 
-          <div className="product-info">Quantity: 1</div>
+          <div className="product-info">
+            {orderProduct.product.name}
+          </div>
+
+          <div className="product-info">Quantity: {orderProduct.quantity}</div>
 
           <img
             className="product-image"
-            src="images/products/athletic-cotton-socks-6-pairs.jpg"
-            alt="Black and Gray Athletic Cotton Socks - 6 Pairs"
+            src={orderProduct.product.image}
+            alt={orderProduct.product.name}
           />
 
           <div className="progress-labels-container">

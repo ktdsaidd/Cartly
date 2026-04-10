@@ -4,7 +4,7 @@ import CartIcon from '../assets/images/icons/cart-icon.png';
 import SearchIcon from '../assets/images/icons/search-icon.png';
 import LogoWhite from '../assets/images/logo-white.png';
 import MobileLogoWhite from '../assets/images/mobile-logo-white.png';
-export function Header({cart}){
+export function Header({cart=[]}){
 
   let totalQuantity = 0;
 
