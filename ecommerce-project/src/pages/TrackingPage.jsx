@@ -22,7 +22,7 @@ export function TrackingPage({cart}) {
 
   return (
     <>
-    <title>Tracking</title>
+    <title>Cartly Order Tracking</title>
     <link rel="icon" type="image/svg+xml" href="tracking-favicon.png" />
       <Header cart={cart} />
 

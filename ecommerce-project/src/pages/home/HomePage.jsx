@@ -19,7 +19,7 @@ export function HomePage({ cart,loadCart }) {
   return (
     <>
       <link rel="icon" type="image/svg+xml" href="home-favicon.png" />
-      <title>Ecommerce Project</title>
+      <title>Cartly - Your Shopping Destination</title>
       <Header cart={cart} />
 
       <div className="home-page">
