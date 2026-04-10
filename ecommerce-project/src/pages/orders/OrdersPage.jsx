@@ -49,7 +49,7 @@ export function OrdersPage({ cart }) {
                     return (
                       <Fragment key={orderProduct.product.id}>
                         <div className="product-image-container">
-                          <img src={orderProduct.product.image} />
+                          <img src={orderProduct.product.image} alt={orderProduct.product.name} />
                         </div>
 
                         <div className="product-details">
@@ -64,6 +64,7 @@ export function OrdersPage({ cart }) {
                             <img
                               className="buy-again-icon"
                               src={BuyAgainIcon}
+                              alt="Buy again"
                             />
                             <span className="buy-again-message">
                               Add to Cart

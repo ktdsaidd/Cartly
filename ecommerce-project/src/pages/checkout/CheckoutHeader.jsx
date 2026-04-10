@@ -9,8 +9,8 @@ export function CheckoutHeader(){
         <div className="header-content">
           <div className="checkout-header-left-section">
             <Link to="/">
-              <img className="logo" src={Logo} />
-              <img className="mobile-logo" src={MobileLogo} />
+              <img className="logo" src={Logo} alt="Logo" />
+              <img className="mobile-logo" src={MobileLogo} alt="Mobile Logo" />
             </Link>
           </div>
 
@@ -23,7 +23,7 @@ export function CheckoutHeader(){
           </div>
 
           <div className="checkout-header-right-section">
-            <img src={CheckoutLockIcon} />
+            <img src={CheckoutLockIcon} alt="Secure checkout" />
           </div>
         </div>
       </div>

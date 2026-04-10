@@ -30,6 +30,7 @@ export function OrderSummary({cart, deliveryOptions,loadCart}){
                       <img
                         className="product-image"
                         src={cartItem.product.image}
+                        alt={cartItem.product.name}
                       />
 
                       <div className="cart-item-details">

@@ -25,6 +25,7 @@ export function TrackingPage({cart}) {
           <img
             className="product-image"
             src="images/products/athletic-cotton-socks-6-pairs.jpg"
+            alt="Black and Gray Athletic Cotton Socks - 6 Pairs"
           />
 
           <div className="progress-labels-container">
