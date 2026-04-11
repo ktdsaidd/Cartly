@@ -6,7 +6,26 @@
 A complete, production-ready e-commerce platform with a modern React frontend and scalable Express backend. Perfect for learning full-stack development or as a template for your own e-commerce project.
 
 **🎯 Everything you need:** Product browsing → Shopping cart → Checkout → Order tracking
+# 🛍️ Cartly – Full-Stack E-Commerce Platform
 
+
+### 🎯 Quick Links
+- 🌐 **[Live Demo](http://cartly-env.eba-rfxmimnw.ap-southeast-2.elasticbeanstalk.com/)** – Shop & track orders now!
+- 📖 **[Backend Documentation](./ecommerce-backend/README.md)**
+- 📖 **[Frontend Documentation](./ecommerce-project/README.md)**
+
+
+---
+
+## 🌟 Key Features
+
+### 🛒 Shopping Experience
+- ✅ Browse product catalog with responsive grid
+- ✅ Real-time search with debounced filtering
+- ✅ Add/remove items from cart with quantity control
+- ✅ Multiple delivery speed options with cost calculation
+
+[... rest of README continues as before ...]
 ---
 
 ## 🌟 Key Features
