@@ -1,8 +1,4 @@
 
----
-
-## **README 3: Main Project README**
-Save as: `README.md` (in root: `c:\Users\hp\OneDrive\Desktop\Cartly\README.md`)
 
 ```markdown
 # 🛍️ Cartly – Full-Stack E-Commerce Platform
