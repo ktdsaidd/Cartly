@@ -1,17 +1,57 @@
-## Intro to the Project
-This is the backend for the [ecommerce-project](https://github.com/SuperSimpleDev/ecommerce-project).
-- 95% of the code was generated with AI.
+# 🛍️ Cartly E-Commerce Backend
 
-## Video Tutorials
-**Part 1 - Create the Backend:** https://youtu.be/vBprybSmJs8
+RESTful Express.js API for a full-featured e-commerce platform. Built with **Node.js, Express, and Sequelize ORM** for flexible database deployment (SQLite, MySQL, or PostgreSQL).
 
-## Set up this backend
-1. Make sure you have NodeJS installed (version 22+). If not, [click here to install](https://nodejs.org/).
-2. Download this code by clicking the green `Code` button (in the top-right) > Click `Download Zip`.
-3. Unzip the code. On Windows, right-click the zip file > `Extract All`. On Mac, double-click the zip file.
-4. Open this code in VSCode.
-5. At the top menu of VSCode, click `Terminal` > `New Terminal`.
-6. In the Terminal, run `npm install`, and run `npm run dev`.
+---
 
-## Troubleshooting
-If you run into issues, see the [troubleshooting steps](troubleshooting.md).
+## ✨ Features
+
+- ✅ **Product Management** – Browse, search, and filter products
+- ✅ **Shopping Cart** – Add/remove items, validate quantities (1-10)
+- ✅ **Order Processing** – Create orders with automatic tax calculation (10%)
+- ✅ **Delivery Options** – Multiple shipping speeds with dynamic cost calculation
+- ✅ **Order Tracking** – Retrieve order history and details
+- ✅ **Payment Summary** – Real-time cart total breakdown
+- ✅ **Database Flexibility** – SQLite (development) or AWS RDS (production)
+- ✅ **Database Reset** – Quick development/testing reset
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Version | Purpose |
+|------------|---------|---------|
+| **Node.js** | ≥14 | Runtime environment |
+| **Express.js** | 4.21.2 | Web framework & routing |
+| **Sequelize** | 6.6.5 | ORM for database interaction |
+| **SQLite** | (via sql.js) | Default database (development) |
+| **CORS** | Built-in | Cross-origin request handling |
+| **Nodemon** | Dev | Auto-restart on file changes |
+| **ESLint** | Dev | Code quality & style |
+
+**Database Options:**
+- Local SQLite (default, zero configuration)
+- AWS RDS: MySQL 8.0 or PostgreSQL 12+
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js v14 or higher
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone/navigate to backend folder
+cd ecommerce-backend
+
+# Install dependencies
+npm install
+
+# Start development server
+npm start
+
+# Or with auto-reload (watch mode)
+npm run dev
